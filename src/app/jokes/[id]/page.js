@@ -15,7 +15,18 @@ export default async function Joke({ params }) {
       {joke.map((joke) => (
         <div key={joke.id}>
           <h3>
-            Joke ID: {joke.id}
+            {`Joke ID: ${joke.id}`.split("").map((letter, i) => (
+              <span
+                key={i}
+                className="text-7x1 font-bold
+              	text-blue-600 inline-block animate-bounce 
+              	hover:text-sky-500 transition-colors"
+                style={{ animationDelay: `${i * 0.1}s` }}
+              >
+                {letter}
+              </span>
+            ))}{" "}
+            {/*  Joke ID: {joke.id} */}
             <br />
           </h3>
           <p>
