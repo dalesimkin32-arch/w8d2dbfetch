@@ -13,7 +13,7 @@ export default async function Joke({ params }) {
   return (
     <div>
       {joke.map((joke) => (
-        <div key={joke.id}>
+        <div key={joke.id} className="grid-cols-1 justify-items-center">
           <h3>
             {`Joke ID: ${joke.id}`.split("").map((letter, i) => (
               <span
